@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="stylesheet.css">
+</head>
+
+<body>
+    <div id="container">
+        <h1 id="title">
+            Podcast Submission Form</h1>
+        <form>
+            <hr>
+            <p class="form-header">
+                Podcast</p>
+
+            <label for="podcast-name"class="description">
+                Which Podcast was this recorded for?</label>
+            <select id="podcast-name" class="inputBox" name="podcast">
+                <option value="" disabled selected>
+                    Select podcast</option>
+                <option value="doubleTap">Double Tap</option>
+                <option value="droppingSpicy">Dropping Spicy</option>
+                <option value="prepareToAttack">Prepare to Attack</option>
+                <option value="pushThePoint">Push the Point</option>
+                <option value="sitrepRadio">Sitrep Radio</option>
+                <option value="mashcast">Mashcast</option>
+                <option value="taurenAndTheGoblin">Tauren and the Goblin</option>
+                <option value="watchpointRadio">Watchpoint Radio</option>
+                <option value="wondrousTails">Wondrous Tails</option>
+                <option value="wowTalk">WoW Talk</option>
+            </select>
+            <br>
+
+            <p class="form-header">
+                Episode Number</p>
+
+            <label for="ep-num" class="description">
+                If this is a special edition enter "SE"</label>
+            <input id="ep-num" class="inputBox" placeholder="Episode Number">
+            <br>
+
+            <p class="form-header">
+                Episode Title</p>
+
+            <p class="description">
+                Episode titles can be creative, but they also need to be descriptive.</p>
+            <p id="title-num">--
+            </p>
+            <input id="title-name" class="inputBox" placeholder="Title"><br>
+
+            <p class="form-header">
+                Description</p>
+
+            <p class="description">
+                A description of the episode. The goal is to have 300 words or more, but is not required. Maximum of 800
+                characters</p>
+            <textarea class="notesBox" maxlength=800 id="ep-desc" placeholder="Episode description"></textarea>
+            <input disabled class="dataBox" maxlength="3" size="6" value="" id="char-counter">
+            <input disabled class="dataBox" maxlength="3" size="5" value="" id="word-counter"><br>
+
+            <p class="form-header">
+                Short Description</p>
+
+            <p class="description">
+                This should be an abbriviated description. It's what Google, Facebook users, and possibly Twitter will
+                see. Should be 80 characters or less.</p>
+            <textarea class="notesBox" id="short-desc" maxlength=80 placeholder="Episode description"></textarea>
+
+            <input disabled class="dataBox" maxlength="3" size="6" value="" id="char-counter2">
+            <input disabled class="dataBox" maxlength="3" size="5" value="" id="word-counter2"><br>
+
+            <p class="form-header">
+                Keywords</p>
+
+            <p class="description">
+                Tags help when users search for certain content on various websites (e.g. "Street Fighter", "World of
+                Warcraft", etc). Please add any tags you think this episode should be filed with. <br> (Press
+                <b>"Enter"</b> to submit each keyword, press <b>"Delete"</b> to remove the last entry)</p>
+
+            <input type="text" class="inputBox" id="keyWords" placeholder="keywords"></input><br>
+
+            <input disabled class="dataBox" id="keyWordsEntered" placeholder="Keywords Entered"></input><br>
+
+            <button type="button" class="mobile-hide" id="keyword-enter">Enter</button>
+            <button type="button" class="mobile-hide" id="keyword-delete">
+                Delete</button>
+
+            <p class="form-header">
+                Hosts</p>
+            <p class="description">
+                Which hosts were present on this episode? Please type full names. <br> "Enter" to submit, "Delete", to
+                remove last.</p><br>
+            <input type="text" class="inputBox" id="hosts" placeholder="Hosts"></input><br>
+
+            <input disabled class="dataBox" id="hostsEntered" placeholder="Hosts Entered"></input><br>
+
+            <button type="button" class="mobile-hide" id="hosts-enter">
+                Enter</button>
+            <button type="button" class="mobile-hide" id="hosts-delete">
+                Delete</button>
+
+            <p class="form-header">
+                Guests</p>
+            <p class="description">
+                Enter of the names of any guest hosts on separate lines. Add social media info next to names. <br>
+                "Enter" to submit, "Delete", to remove last.</p><br>
+            <input type="text" class="inputBox" id="guests" placeholder="Guests"></input><br>
+
+            <input disabled class="dataBox" id="guestsEntered" placeholder="Guests Entered"></input><br>
+
+            <button type="button" class="mobile-hide" id="guests-enter">Enter</button>
+            <button type="button" class="mobile-hide" id="guests-delete">Delete</button>
+
+            <p class="form-header">
+                Show Notes</p>
+            <label for="notes" class="description">
+                Place any notes or links in reference to the episode here.</label>
+            <textarea id="notes" class="notesBox"></textarea><br>
+            <p class="form-header">
+                Topics</p>
+            <label for="topics" class="description">
+                Please note your topics here, line by line. If (meaning it's optional) you track start time, put it next
+                to the topic.</label>
+            <textarea id="topics" class="notesBox"></textarea><br>
+
+            <p class="form-header">
+                Suggested Image</p>
+            <p class="description">
+                Image needs to be a minimum of 1280x720. If link is valid, image should display below.</p>
+            <input type="text" class="inputBox" id="imgEntry" placeholder="Image Link"><br>
+            <img id="sugImg" src="" alt=""><br>
+
+        </form>
+        <button type="button" class="responsive-button" id="submit-button">
+            Submit</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
